@@ -1,0 +1,13 @@
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.exe
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.deps.json
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.runtimeconfig.json
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.runtimeconfig.dev.json
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.dll
+C:\PRRPRR 1\Övning if satser\If satser\bin\Debug\netcoreapp3.1\If satser.pdb
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.csprojAssemblyReference.cache
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.AssemblyInfoInputs.cache
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.AssemblyInfo.cs
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.csproj.CoreCompileInputs.cache
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.dll
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.pdb
+C:\PRRPRR 1\Övning if satser\If satser\obj\Debug\netcoreapp3.1\If satser.genruntimeconfig.cache
