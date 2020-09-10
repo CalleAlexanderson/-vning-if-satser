@@ -12,6 +12,7 @@ namespace If_satser
             int choice4Int = 0;
             int choice5Int = 0;
             int choice6Int = 0;
+            int win = 0;
 
 
             while (choice1Int == 1)
@@ -44,6 +45,22 @@ namespace If_satser
             {
                 Choice2Text();
 
+                string choice2 = AskQuestion();
+
+                if (choice1 == "a")
+                {
+                    System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
+                    choice2Int = 0;
+                    win = 1;
+
+                }
+                else if (choice1 == "b")
+                {
+                    System.Console.WriteLine("A sharp pain wakes you, followed by a numbing feeling in your neck and everything fades to black \n" +
+                    "You Died");
+                    choice2Int = 0;
+                }
+
             }
         }
 
@@ -59,7 +76,8 @@ namespace If_satser
         static void Choice2Text()
         {
 
-            System.Console.WriteLine("After a harrowing night of hearing animals ruffle through the vegetation and " + "");
+            System.Console.WriteLine("After a harrowing night of hearing animals ruffle through the vegetation and howls creeping closer \n" +
+            "Choice A: Explore the area in dayligt. \n Choice B: Get some actual deepsleep");
         }
 
         static string AskQuestion()
