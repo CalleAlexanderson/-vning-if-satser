@@ -45,21 +45,53 @@ namespace If_satser
             {
                 Choice2Text();
 
+
                 string choice2 = AskQuestion();
 
-                if (choice1 == "a")
+                if (choice2 == "a")
                 {
                     System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
                     choice2Int = 0;
                     win = 1;
 
                 }
-                else if (choice1 == "b")
+                else if (choice2 == "b")
                 {
                     System.Console.WriteLine("A sharp pain wakes you, followed by a numbing feeling in your neck and everything fades to black \n" +
                     "You Died");
                     choice2Int = 0;
                 }
+
+                while (choice3Int == 1)
+                {
+
+                    Choice3text();
+
+                    string choice3 = AskQuestion();
+
+                    if (choice3 == "a")
+                    {
+                        System.Console.WriteLine("You follow the footprints leading to a cove, what's the next move?");
+                        choice3Int = 0;
+                        choice4Int = 1;
+                    }
+
+                    if (choice3 == "b")
+                    {
+                        System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
+                        choice3Int = 0;
+                        win = 1;
+
+                    }
+
+                    if (choice3 == "c")
+                    {
+                        choice3Int = 0;
+                        choice2Int = 1;
+                    }
+                }
+
+                Console.ReadLine();
 
             }
         }
@@ -76,8 +108,14 @@ namespace If_satser
         static void Choice2Text()
         {
 
-            System.Console.WriteLine("After a harrowing night of hearing animals ruffle through the vegetation and howls creeping closer \n" +
-            "Choice A: Explore the area in dayligt. \n Choice B: Get some actual deepsleep");
+            System.Console.WriteLine("After a harrowing night of hearing animals ruffle through the vegetation and howls creeping closer, what's next?" +
+            "\n Choice A: Explore the area in dayligt. \n Choice B: Get some actual deepsleep");
+        }
+
+        static void Choice3text()
+        {
+            System.Console.WriteLine("After this finding what is your next action?" +
+            "\n Choice A: Follow the footprints. \n Choice B: Continue the search. \n Choice C: Make a fire ");
         }
 
         static string AskQuestion()
