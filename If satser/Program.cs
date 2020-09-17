@@ -10,9 +10,11 @@ namespace If_satser
             int choice2Int = 0;
             int choice3Int = 0;
             int choice4Int = 0;
-            int choice5Int = 0;
-            int choice6Int = 0;
             int win = 0;
+            int death = 0;
+            string restart = "";
+
+
 
 
             while (choice1Int == 1)
@@ -29,9 +31,10 @@ namespace If_satser
                 }
                 else if (choice1 == "b")
                 {
-                    System.Console.WriteLine("A sharp pain wakes you, followed by a numbing feeling in your neck and everything fades to black \n" +
+                    System.Console.WriteLine("A sharp pain wakes you, followed by a numbing feeling in your neck and everything fades to black. \n" +
                     "You Died");
                     choice1Int = 0;
+                    death = 1;
                 }
                 else if (choice1 == "c")
                 {
@@ -60,40 +63,85 @@ namespace If_satser
                     System.Console.WriteLine("A sharp pain wakes you, followed by a numbing feeling in your neck and everything fades to black \n" +
                     "You Died");
                     choice2Int = 0;
+                    death = 1;
                 }
 
-                while (choice3Int == 1)
-                {
 
-                    Choice3text();
-
-                    string choice3 = AskQuestion();
-
-                    if (choice3 == "a")
-                    {
-                        System.Console.WriteLine("You follow the footprints leading to a cove, what's the next move?");
-                        choice3Int = 0;
-                        choice4Int = 1;
-                    }
-
-                    if (choice3 == "b")
-                    {
-                        System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
-                        choice3Int = 0;
-                        win = 1;
-
-                    }
-
-                    if (choice3 == "c")
-                    {
-                        choice3Int = 0;
-                        choice2Int = 1;
-                    }
-                }
-
-                Console.ReadLine();
 
             }
+
+            while (choice3Int == 1)
+            {
+
+                Choice3text();
+
+                string choice3 = AskQuestion();
+
+                if (choice3 == "a")
+                {
+                    System.Console.WriteLine("You follow the footprints leading to a cove, what's the next move?");
+                    choice3Int = 0;
+                    choice4Int = 1;
+                }
+
+                if (choice3 == "b")
+                {
+                    System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
+                    choice3Int = 0;
+                    win = 1;
+
+                }
+            }
+
+            while (choice4Int == 1)
+            {
+
+                Choice4text();
+
+                string choice4 = AskQuestion();
+
+                if (choice4 == "a")
+                {
+                    System.Console.WriteLine("You walk into the cove and find bones before you hear a something running towards you \n" +
+                    "The next thing you know you feel a sharp pain before everything fades to black \n" + "You Died");
+                    choice4Int = 0;
+                    death = 1;
+                }
+
+                if (choice4 == "b")
+                {
+                    System.Console.WriteLine("You find a cabin and a nice man lets you borrow a phone to call for help");
+                    choice4Int = 0;
+                    win = 1;
+                }
+            }
+
+            while (win == 1)
+            {
+                Console.WriteLine("You win");
+                win = 0;
+                Console.ReadLine();
+            }
+
+            while (death == 1)
+            {
+                Restarttext();
+                restart = Console.ReadLine().ToLower();
+
+
+
+                if (restart == "r")
+                {
+                    choice1Int = 1;
+                    choice2Int = 0;
+                    choice3Int = 0;
+                    choice4Int = 0;
+                    win = 0;
+                    death = 0;
+
+                }
+            }
+
         }
 
         static void Choice1Text()
@@ -115,8 +163,15 @@ namespace If_satser
         static void Choice3text()
         {
             System.Console.WriteLine("After this finding what is your next action?" +
-            "\n Choice A: Follow the footprints. \n Choice B: Continue the search. \n Choice C: Make a fire ");
+            "\n Choice A: Follow the footprints. \n Choice B: Continue the search.");
         }
+
+        static void Choice4text()
+        {
+            System.Console.WriteLine("\n Choice A: Go deeper into the cove. \n Choice B: Continue the search elsewhere.");
+        }
+
+
 
         static string AskQuestion()
         {
@@ -130,6 +185,11 @@ namespace If_satser
             }
 
             return answer;
+        }
+
+        static void Restarttext()
+        {
+            Console.WriteLine("Type r to restart");
         }
 
     }
